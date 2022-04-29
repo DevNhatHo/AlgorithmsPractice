@@ -1,0 +1,36 @@
+public class Main
+{
+    public static void main(String[] args) {
+        int[] arr = new int[]{1,2,3,4,5,6};
+        int arrSize = arr.length;
+        int[] newArr = new int[arrSize+1];
+        int elementPosition = 2;
+        
+        System.out.println("Inserting element to full array...)");
+        
+        //create new array with increased size by 1
+        //then old array and insert values during iteration
+        //declare counter for j to keep track of where the pointer for old array value is to insert and position
+        int j = 0;
+        
+        //uses newArr.length to iterate due to new array size is increased by 1
+        for(int i =0; i< newArr.length; i++){
+            if(i==elementPosition){
+                newArr[i]=11;
+            } else{
+                //insert element where the j pointer is currently at and increase j++
+                newArr[i] = arr[j];
+                j++;
+            }
+            //newArr[elementPosition]=11;
+            
+        }
+        for(int x : newArr){
+            System.out.println(x);
+        }
+        
+        
+        
+        
+    }
+}
